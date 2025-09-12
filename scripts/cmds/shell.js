@@ -15,7 +15,7 @@ module.exports.config = {
 };
 
 module.exports.onStart = async ({ message, args }) => {
-     // const admin = ["1 admin uid"]
+     // const admin = ["61572240295227"]
     //if (!admin.includes(event.senderID)) { 
       //  return message.reply("You do not have permission to execute shell commands.");
    // }

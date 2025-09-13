@@ -1,17 +1,18 @@
 /**
  * Modified Goat.js for Termux
- * Adds safety checks for missing modules and files
+ * Replaces bcrypt with bcryptjs and adds safe module checks
  */
 
 process.on('unhandledRejection', error => console.log(error));
 process.on('uncaughtException', error => console.log(error));
 
-let axios, fsExtra, google, nodemailer, nodeCron;
+let axios, fsExtra, google, nodemailer, nodeCron, bcrypt;
 try { axios = require("axios"); } catch(e) { console.log("Module axios missing. Run: npm install axios"); }
 try { fsExtra = require("fs-extra"); } catch(e) { console.log("Module fs-extra missing. Run: npm install fs-extra"); }
 try { google = require("googleapis").google; } catch(e) { console.log("Module googleapis missing. Run: npm install googleapis"); }
 try { nodemailer = require("nodemailer"); } catch(e) { console.log("Module nodemailer missing. Run: npm install nodemailer"); }
 try { nodeCron = require("node-cron"); } catch(e) { console.log("Module node-cron missing. Run: npm install node-cron"); }
+try { bcrypt = require("bcryptjs"); } catch(e) { console.log("Module bcryptjs missing. Run: npm install bcryptjs"); }
 
 const { execSync } = require('child_process');
 const path = require("path");

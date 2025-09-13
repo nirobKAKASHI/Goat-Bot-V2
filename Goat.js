@@ -126,7 +126,7 @@ global.client = {
 	commandBanned: configCommands.commandBanned
 };
 
-const utils = require("./utils.js");
+const utils = require("./goat.js");
 global.utils = utils;
 const { colors } = utils;
 
